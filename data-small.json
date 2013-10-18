@@ -1,0 +1,26 @@
+[
+  {
+    "name": "adm_access",
+    "value": "User",
+    "language": 15,
+    "lastChanged": "2013-07-30 11:06:50"
+  },
+  {
+    "name": "adm_accounting_branch_text",
+    "value": "Branch",
+    "language": 15,
+    "lastChanged": "2013-06-18 11:06:16"
+  },
+  {
+    "name": "adm_accounting_branch_text2",
+    "value": "Branch",
+    "language": 13,
+    "lastChanged": "2013-06-19 11:06:26"
+  },
+  {
+    "name": "adm_accounting_choose",
+    "value": "choose",
+    "language": 15,
+    "lastChanged": "2013-06-20 11:06:25"
+  }
+]

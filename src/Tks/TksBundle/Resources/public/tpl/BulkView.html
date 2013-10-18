@@ -1,0 +1,58 @@
+<div class="row-fluid" id="bulk">
+    <form id='bulk-form' class="form-inline">
+    <div class="span3">
+        SOURCE: <hr/>
+        <label id='bulk-source-deployments'></label>
+        <label id='bulk-source-languages'></label>
+        <div class="btn-group">
+            <input name="filter" type='text' id='bulk-source-filter' placeholder="Filter..." style='padding-right: 33px; width: 179px'/>
+            <a class="btn dropdown-toggle" data-toggle="dropdown" style="margin-left:-33px">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a><label class="radio"><input name="filter-opt" type="radio" value="contains" checked/> contains</label></a>
+                </li>
+                <li>
+                    <a><label class="radio"><input name="filter-opt" type="radio" value="endswith"/> ends with</label></a>
+                </li>
+                <li>
+                    <a><label class="radio"><input name="filter-opt" type="radio" value="startswith" /> starts with </label></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="span1" id="middle-column">
+        <img src='/bundles/tks/images/right-arrow.jpg' />
+    </div>
+    <div class="span3">
+        TARGET: <hr/>
+        <label id='bulk-target-deployments'></label>
+        <div class="btn-group">
+            <button type='button' class="btn btn-primary bulkcopy">Bulk copy</button>
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a><label class="radio"><input name="opt" type="radio" value="create-replace" checked/> REPLACE + CREATE </label></a>
+                </li>
+                <li>
+                    <a><label class="radio"><input name="opt" type="radio" value="create" /> ONLY CREATE new entries </label></a>
+                </li>
+            </ul>
+        </div>
+        <img src='/bundles/tks/images/ajax-loader.gif' id='spinner' style='display:none; margin-left:10px' />
+    </div>
+    <div class="span5">
+        <div class="alert alert-block hide">
+            <button type="button" class="close">&times;</button>
+            <h4>Warning!</h4>
+            You are going to <b /> <br/>
+            - FROM: <b class='from' /> <br/>
+            - TO: <b class='to'/> <br/>
+            - USING FILTER: <b class='filter'/> <br/>
+            A security copy file will be created. Do you want to proceed? <br/><br/>
+            <button type='submit' class="btn btn-warning">Accept</button>
+        </div>
+    </div>
+    </form>
+</div>

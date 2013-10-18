@@ -1,0 +1,51 @@
+<div class="row-fluid">
+    <div class="span12">
+        <form id='target-filters' class='form-inline'>
+            <label id='deployments'></label>
+            <label id='languages'></label>
+            <div class="input-append">
+                <input type="text" id="filter" placeholder="Filter" value="cmp"/>
+                <div class="btn-group">
+                    <button type="submit" class="btn">START</button>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu" style="z-index: 100">
+                        <li>
+                            <a><label class="radio"><input name="opt" type="radio" value="mine" checked/> Show only deployment keynames </label></a>
+                        </li>
+                        <li>
+                            <a><label class="radio"><input name="opt" type="radio" value="all" /> Show all keynames </label></a>
+                        </li>
+                        <li>
+                            <a><label class="radio"><input name="opt" type="radio" value="empty" /> Show only empty keynames </label></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" id='add-comparator'><i class="icon-plus icon-white"></i> Add comparator</a>
+        </form>
+        <div class="row-fluid" id="table">
+            <div id='editor'></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">New comparator</h3>
+    </div>
+    <div class="modal-body">
+        <p>
+            <label id='comparator-deployments'></label>
+            <label id='comparator-languages'></label>
+            <label id='comparator-hotkey'>
+                <b>Hotkey:</b> ALT + <input type='text' value='1' class='input-mini' />
+            </label>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary" data-dismiss="modal">Add</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+Tks\TksBundle\Entity\TranslationKeys:
+    type: entity
+    table: translation_keys
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 250
+            fixed: false
+            nullable: false
+        value:
+            type: text
+            nullable: false
+        lastchanged:
+            type: datetime
+            nullable: false
+            column: lastChanged
+    manyToOne:
+        language:
+            targetEntity: Languages
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                language_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        deployment:
+            targetEntity: Deployments
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                deployment_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

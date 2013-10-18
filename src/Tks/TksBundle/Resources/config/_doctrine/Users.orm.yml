@@ -1,0 +1,36 @@
+Tks\TksBundle\Entity\Users:
+    type: entity
+    table: users
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: true
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        username:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+        salt:
+            type: string
+            length: 32
+            fixed: false
+            nullable: false
+        password:
+            type: string
+            length: 40
+            fixed: false
+            nullable: false
+        email:
+            type: string
+            length: 60
+            fixed: false
+            nullable: false
+        isActive:
+            type: boolean
+            nullable: false
+            column: is_active
+    lifecycleCallbacks: {  }

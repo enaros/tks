@@ -1,0 +1,23 @@
+Tks\TksBundle\Entity\Deployments:
+    type: entity
+    table: deployments
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+        apitoken:
+            type: string
+            length: 250
+            fixed: false
+            nullable: false
+            column: apiToken
+    lifecycleCallbacks: {  }

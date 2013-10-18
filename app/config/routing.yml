@@ -1,0 +1,13 @@
+tks:
+    resource: "@TksBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern:   /login
+    defaults:  { _controller: TksBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    path: /logout

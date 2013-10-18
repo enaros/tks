@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<title>TKS: User documentation</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style>
+		html, body, h2, h3, p {
+			margin:0;
+			padding:0;
+			font-family: source-sans-pro, sans-serif;
+		}
+		h2 { font-size: 25px }
+		h2, h3, p { padding: 10px; }
+		h3 { display: inline; }
+		a { cursor: pointer; }
+		p { font-size: 13px; }
+		h2 { background: black; color: white;}
+		.web_hidden {
+			display: none;
+		}
+		@media print {
+			.web_hidden {
+				display: block;
+			}
+			div {
+				page-break-after: always;
+				page-break-inside: avoid;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>TKS: User Documentation</h2>
+	<h3>Basic workflow</h3> <a>show</a> <br/>
+	<div class="web_hidden">
+		<p>
+			The first screen will look like this.<br/> 
+			You have to select the target Deployment and Language you want to edit and a Filter. The Filter will narrow the keys to those which starts/contains/ends with the filter.<br/>
+			<b>It is recommended to use always a filter to narrow the search, otherwise you will end up editing 4000+ keys.</b><br/>
+			Additional options will target different sets of keys.
+		</p>
+		<img src='screen01.png' />
+		<p>
+			Once you click the <button class="btn btn-small">START</button> button, you can: <br/>
+			- start editing right away, just type in and press <code>TAB</code> (or <code>SHIFT + TAB</code> to go backwards)</b> to move on the next/previous translation key <br/>
+			- add a Comparator Column, which will help you to compare different deployments/languages <br/>
+			<b>Every change is automatically saved when you move between rows.</b><br/>
+			If you would like to set a particular key to <code>__EMPTY__</code>, press <code>CTRL + SPACE</code>.
+		</p>
+		<img src='screen02.png' />
+	</div>
+	<h3>Add a comparator column</h3> <a>show</a> <br/>
+	<div class="web_hidden">
+		<p>
+			Press the <button class="btn btn-primary btn-small"><i class="icon-plus icon-white"></i> Add comparator</button> button to see the following modal dialog:
+		</p>
+		<img src='screen03.png' />
+		<p>
+			Once you add new columns, you will be able to compare between deployment/languages.<br/>
+			Hotkeys will automatically copy the content from the comparator column to the translation key that you are editing. Just press <code>ALT + N</code> where <code>N</code> is the hotkey for that column.<br/>
+			You can start all over pressing the <button class="btn btn-small">START</button> button again.
+		</p>
+		<img src='screen04.png' />
+	</div>
+	<h3>Stats</h3> <a>show</a> <br/>
+	<div class="web_hidden">
+		<p>
+			You will see a column chart for each language in every deployment where your User has <code>READ PERMISSIONS</code><br/>
+			Each color represents a language, and grey colors represents translation keys that have not been completed yet.<br/>
+			Mouse over a column to see detailed numeric information.
+		</p>
+	<img src='screen05.png' />
+	</div>
+	<h3>Bulk copies</h3> <a>show</a> <br/>
+	<div class="web_hidden">
+		<p>
+			You can copy all the translation keys from a Deployment + Language to a different target Deployment.<br/>
+			You can select between two options: <br/>
+			- REPLACE + CREATE will create new translation keys and replace the keys from <code>target</code> with the ones found in <code>source</code> <br/>
+			- ONLY CREATE will only create those translation keys that have not been found in <code>target</code> Deployment
+		</p>
+	<img src='screen06.png' />
+	</div>
+	<script>
+	var allDivs = $("div"),
+		allLinks = $("a");
+	$('a').on("click", function(e) {
+		item = $(e.currentTarget);
+		if (item.text() == 'show') {
+			allDivs.addClass('web_hidden');
+			allLinks.text('show');
+			item.text('hide');
+			item.nextAll('div:first').removeClass('web_hidden');
+		} else {
+			allDivs.addClass('web_hidden');
+			item.text('show');
+		}
+	});
+	</script>
+</body>
+</html>

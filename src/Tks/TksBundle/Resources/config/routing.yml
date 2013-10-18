@@ -1,0 +1,37 @@
+tks:
+    resource: "@TksBundle/Controller/TksController.php"
+    type:     annotation
+    prefix:   /api
+
+csv:
+    resource: "@TksBundle/Controller/CSVController.php"
+    type:     annotation
+    prefix:   /api
+
+bulk:
+    resource: "@TksBundle/Controller/BulkCopiesController.php"
+    type:     annotation
+    prefix:   /api
+
+bulkCreate:
+    resource: "@TksBundle/Controller/BulkCreateController.php"
+    type:     annotation
+    prefix:   /api
+
+apiToken:
+    resource: "@TksBundle/Controller/ApiTokenController.php"
+    type:     annotation
+
+_welcome:
+    pattern:  /
+    defaults: { _controller: TksBundle:Default:index }
+
+deployment_access:
+    pattern: /{select}/{deployment}
+    defaults: { _controller: TksBundle:Default:deploymentAccess }
+    requirements:
+      only: onlyone|all
+
+editor:
+    pattern:  /editor
+    defaults: { _controller: TksBundle:Default:editor }

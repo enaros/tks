@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: dev-db2
+    database_port: null
+    database_name: tks
+    database_user: emiliano
+    database_password: emiliano
+    mailer_transport: smtp
+    mailer_host: sys-mail.lf.lan
+    mailer_user: emiliano.onorati@lf.lan
+    mailer_password: lf2002
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeItSoon

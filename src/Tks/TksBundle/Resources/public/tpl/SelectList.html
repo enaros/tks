@@ -1,0 +1,4 @@
+<option disabled><%=placeholder%></option>
+<% _.each(o, function(item) { %>
+    <option value='<%=item.id%>' <%=(select==item.name)?'selected':''%>><%=item.name%></option>
+<% }); %>

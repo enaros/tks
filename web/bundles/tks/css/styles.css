@@ -1,0 +1,91 @@
+body {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 14px;
+}
+
+#editor textarea {
+    width:100%;
+    height: 20px;
+}
+
+#content {
+    margin-top: 40px;
+}
+
+#table {
+    margin-top: 54px;
+}
+
+#target-filters {
+    position: fixed;
+    background-color: #fff;
+    padding: 12px 0;
+    margin: 0;
+    z-index: 10;
+    width: 100%;
+}
+#target-filters label {
+    display: inline;
+    margin-right: 4px;
+}
+
+#target-filters .btn[type='submit'] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.editor-header {
+    position: fixed;
+    background: #fff;
+    width: 1170px;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 9;
+}
+.editor-header div {
+    font-weight: bold;
+}
+.editor-rows {
+    padding-top: 32px;
+}
+
+.editor-header small {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+#editor textarea {
+    margin-bottom: 5px;
+    /*padding: 2px 4px;*/
+    font-size: 13px;
+}
+.editor-row {
+    clear:both;
+    padding-top: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin: 2px 0;
+    /*border-bottom: 1px solid black;*/
+}
+#editor .editor-row:nth-child(even) {
+    background-color: #f0f0f0;
+}
+#editor .editor-row:hover {
+    background-color: #ddd;
+}
+
+#add-comparator {
+    display: none;
+    margin-left: 4px;
+}
+
+.keynames {
+    padding-top: 5px;
+    padding-left: 3px;
+}
+.comparator {
+    padding-top: 5px;
+}
+
+#editor .control-group.error {
+    margin-bottom:0;
+}

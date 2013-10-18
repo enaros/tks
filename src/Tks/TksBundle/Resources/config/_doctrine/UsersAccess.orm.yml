@@ -1,0 +1,35 @@
+Tks\TksBundle\Entity\UsersAccess:
+    type: entity
+    table: users_access
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: true
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        canWrite:
+            type: boolean
+            nullable: false
+            column: can_write
+    manyToOne:
+        deployment:
+            targetEntity: Deployments
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                deployment_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        user:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
